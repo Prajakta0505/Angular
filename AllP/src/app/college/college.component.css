@@ -1,0 +1,11 @@
+.active-list-item {
+    background-color: maroon !important; 
+  }
+  .mat-toolbar {
+   text-align: center;
+  
+  }
+  
+  .mat-toolbar button {
+    margin-left: 10px; 
+  }

@@ -1,0 +1,29 @@
+
+h1 {
+margin-left: 150px;
+margin-top:10px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  
+.container {
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }
+  
+  form {
+    width: 400px; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .mat-dialog-actions button {
+    margin-right: 10px;
+  }
+  

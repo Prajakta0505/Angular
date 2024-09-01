@@ -1,0 +1,49 @@
+
+<div class="my-3">
+    <h2>Of and From</h2>
+    <br>
+    <strong>Ex -01(OF)</strong>
+     <hr>
+     <div class="row">
+        <div class="col-md-6">
+            <hr>
+            <p><strong>Data:</strong>of('Prajakta','Rajendra','Gangarde')</p>
+            <hr>
+            <ul id="elContainer">
+            </ul>
+          </div>
+     </div> 
+     <div class="row">
+        <div class="col-md-6">
+            <hr>
+            <!-- <p><strong>Data:</strong>of(&#123;Name:'Prajakta',MiddleName:'Rajendra',LastName:'Gangarde')</p> -->
+            <p><strong>Data:</strong>of({{ obsmsg | json }})</p>
+            <hr>
+            <ul>
+                <li><strong>Name:</strong>{{obsmsg.Name}}</li>
+                <li><strong>MiddleName:</strong>{{obsmsg.MiddleName}}</li>
+                <li><strong>LastName:</strong>{{obsmsg.LastName}}</li>
+            </ul>
+          </div>
+     </div> 
+</div> 
+<strong>Ex-02(From)</strong>
+<hr>
+<div class="row">
+  <div class="col-md-4">
+    <strong>(1) Array</strong>
+    <hr>
+    <p><strong>Data:</strong>of(['Karan','sachin','shinde'])</p>
+    <hr>
+    <ul id="elContainer3">
+    </ul>
+<hr>
+    <strong>(2) Promise</strong>
+    <hr>
+    <p><strong><i>Promise to Observables</i></strong></p>
+    <hr>
+    <ul id="elContainer4">
+    </ul>
+  </div>
+  
+</div>

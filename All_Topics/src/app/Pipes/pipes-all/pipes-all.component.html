@@ -1,0 +1,33 @@
+<h1 style="color: blue;">Pipes</h1>
+
+<h2>{{channelName | uppercase}}</h2>
+<p>{{name | lowercase}}</p>
+<h2>{{Titile | titlecase}}</h2>
+<p>{{channelName | slice:2:5}}</p>
+<h1>{{person | json}}</h1>
+
+<h2>{{3.749 | number:'2.3-4' }}</h2>
+<h2>{{3.749 | number:'1.1-2'}}</h2>
+
+<p>{{0.77 | percent}}</p>
+
+<h1>{{0.33 | currency}}</h1>
+
+<div>
+    <p>Original Value: {{ amount }}</p>
+    <p>Formatted Value: {{ amount | currency }}</p>
+    <p>Formatted Value (with currency code): {{ amount | currency:'USD':'symbol':'1.2-2' }}</p>
+  </div>
+
+  <!-- Parametrized pipe -->
+  {{ amount | currency:'EUR'}}
+
+  <!-- Chaining pipe -->
+  <p>{{ dobDate | date:'yyyy-MM-dd' | uppercase }}</p>
+
+ <!--  Custom Pipes -->
+ <!-- <h2>{{ 2 | custom:5}}</h2> -->
+ <!-- <h2>{{ 2 | custom:2:4}}</h2> -->
+
+ <!-- (1) real-time Example of custom pipe -->
+ <p>{{100 | custom:83}}</p>

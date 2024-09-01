@@ -1,0 +1,23 @@
+.col-md-12 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col-md-12 li {
+  flex-basis: calc(20% - 10px); 
+  margin-bottom: 10px;
+  list-style-type: none;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc; 
+  padding: 20px; 
+  box-sizing: border-box;
+  text-align: center;
+  height: 200px; 
+  transition: background-color 0.3s ease; 
+}
+
+.col-md-12 li:hover {
+  background-color: #dcdcdc; 
+  cursor: pointer; 
+}

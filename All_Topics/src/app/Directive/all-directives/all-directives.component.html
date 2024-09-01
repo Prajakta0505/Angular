@@ -1,0 +1,74 @@
+
+<p>all-directives works!</p>
+<!-- <h2  [ngClass]="'mycolor mywriting'">Learning never ends</h2> --> 
+<!-- <h2  [ngClass]="['mycolor','mywriting']">Learning never ends</h2> -->
+<h2  [ngClass]="{'mycolor':condition}">Learning never ends</h2>  
+<h2 [ngClass]="{'mycolor':true,'mywriting':true}">Learning never ends</h2>
+
+<!-- style Binding -->
+<!-- <h2 [style]="'background-color:yellow;'">I love my India</h2> -->
+<h2 [style]="'background-color:yellow; color:red;'">I love my India</h2>
+<h2 [style.color]="'pink'">Try</h2>
+
+<!-- structure Directive  (1) ngIf -->
+<h1 *ngIf="display; else elsepart">
+    Success is key to happiness
+</h1>
+
+<ng-template #elsepart>
+    <h1>happiness is key to success</h1>
+</ng-template>
+
+<div *ngIf="DisplayText==='praju'; then ifpart; else elsepart;"></div>
+<ng-template #ifpart>
+    <h1>
+        Happy
+    </h1>
+</ng-template>
+<ng-template #elsepart>
+    <h1>
+        Sad
+    </h1>
+</ng-template>
+
+
+<!-- ngSwitch directive -->
+<div [ngSwitch]="pizza">
+<div *ngSwitchCase="'Fajita'">You have selected Fajita Pizza</div>
+<div *ngSwitchCase="'Tikka'">You have selected Tikka Pizza</div>
+<div *ngSwitchCase="'Supreme'">You have selected Supreme Pizza</div>
+<div *ngSwitchCase="'Cremy'">You have selected Cremy Pizza</div> 
+<div *ngSwitchDefault>Sorry..!!This pizza is not available</div>
+</div>
+
+<div [ngSwitch]="value">
+    <p *ngSwitchCase="'A'">Value is A</p>
+    <p *ngSwitchCase="'B'">Value is B</p>
+    <p *ngSwitchDefault>Value is neither A nor B</p>
+  </div>
+
+  <!-- ngFor Directive -->
+  <div *ngFor="let fruit of fruits; index as i">
+    <p>{{i}} {{fruit}}</p>
+    </div>
+
+    <div *ngFor="let fruit of fruits; first as t">
+        <h3>{{t}} {{fruit}}</h3>
+        </div>
+
+        <br>
+
+        <div *ngFor="let fruit of fruits; last as t">
+            <h1>{{t}} {{fruit}}</h1>
+            </div>
+        <br>
+            <div *ngFor="let fruit of fruits; odd as o">
+                <p>{{o}} {{fruit}}</p>
+                </div>   
+<!-- Array of object -->
+<div *ngFor="let p of persons">
+    <h2>{{p.name}}</h2>
+    <h2>{{p.age}}</h2>
+    <h2>{{p.isMarried}}</h2>
+    <br>
+</div>

@@ -1,0 +1,22 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "first_name": "Ganesh",
+            "last_name": "Pawar",
+            "phone_number": 97656373647,
+            "email": "ganesh@gmail.com",
+            "gender": "male",
+            "blood_group":"o+"
+        },
+        {
+            "id": 2,
+            "first_name": "Ritesh",
+            "last_name": "Pawar",
+            "phone_number": 97236373647,
+            "email": "ritesh@gmail.com",
+            "gender": "male",
+            "blood_group":"o+"
+        }
+    ]
+}

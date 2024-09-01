@@ -1,0 +1,42 @@
+<mat-toolbar color="primary" class="All">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+    </button>
+    <h1>Information</h1>
+    <span class="example-spacer"></span>
+
+    <span>
+      <a mat-list-item [routerLink]="['college/parent']">
+        <button mat-raised-button>Signup</button>
+      </a>
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav opened mode="side" class="sidenav">
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['sidenav/student']" routerLinkActive="active-list-item"> 
+        <mat-icon>school</mat-icon> Student-list
+      </a>
+      <a mat-list-item [routerLink]="['sidenav/countries']" routerLinkActive="active-list-item">
+        <mat-icon>flag</mat-icon> countries-list
+      </a>
+      <a mat-list-item [routerLink]="['employeeList']" routerLinkActive="active-list-item">
+        <mat-icon>people</mat-icon> Employee-list
+      </a> 
+      <a mat-list-item [routerLink]="['bank']" routerLinkActive="active-list-item">
+        <mat-icon>account_balance</mat-icon> Bank-list
+      </a>   
+      <a mat-list-item [routerLink]="['bankdetails']" routerLinkActive="active-list-item">
+        <mat-icon>account_balance_wallet</mat-icon> Bank-details
+      </a>  
+    </mat-nav-list>       
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">  
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

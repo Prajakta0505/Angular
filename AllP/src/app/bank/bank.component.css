@@ -1,0 +1,22 @@
+
+table {
+    width: 100%;
+  }
+
+  h1{
+font-family: 'Times New Roman', Times, serif;
+  }
+
+.mat-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.mat-table th,
+.mat-table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+
+

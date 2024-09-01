@@ -1,0 +1,17 @@
+<form [formGroup]="signupForm" (ngSubmit)="signupFormSubmit() ">
+    <mat-card class="login-card">
+      <mat-card-header>
+        <mat-card-title>Signup</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field appearance="outline">
+          <input matInput formControlName="username" placeholder="Username">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <input matInput formControlName="email" placeholder="email">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <input matInput formControlName="password" type="password" placeholder="Password">
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Sign-up</button>
+<h1>{{ A | json}}</h1>

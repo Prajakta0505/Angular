@@ -1,0 +1,33 @@
+<h2>Interpolation and data Binding</h2>
+<h2>Welcome {{name}}</h2>   <!-- Interpolation -->
+<button (click)="mydata()">Click me</button>   <!-- event binding-->
+<input type="text" value="Praju" [id]="newId">
+<input type="text" value="Praju" [disabled]="false">   <!-- property binding-->
+
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Mob</td>
+    </tr>
+    <tr>
+        <td [attr.colSpan]="colval">Name</td>
+        <td>Mob</td>
+    </tr>
+</table>
+
+<!-- Attribute binding  -->
+<br>
+<!-- Improving Accessibility -->
+<button [attr.aria-label]="isButtonDisabled ? 'Disabled' : 'Enabled'">
+    Click me
+  </button>
+<br>
+  <!-- dynamic stylling -->
+  <button [style.background-color]="isButtonDisabled2 ? 'gray' : 'green'">
+    Click me
+  </button>
+ <br>
+  <!-- Two-way data binding -->
+  <input [(ngModel)]="lastname" type="text">
+  <h3>{{lastname}}</h3>

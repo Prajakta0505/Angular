@@ -1,0 +1,64 @@
+<div mat-dialog-title>
+  <h1>Employee Form</h1>
+</div>
+<form [formGroup]="empForm" (ngSubmit)="FormSubmit()">
+  <div mat-dialog-content>
+    <div class="content">
+      <mat-form-field appearance="outline">
+        <mat-label>ID</mat-label>
+        <input matInput placeholder="Ex.7" formControlName="id"/>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Education</mat-label>
+        <mat-select formControlName="education">
+          <mat-option value="MCS">MCS</mat-option>
+          <mat-option value="BCS">BCS</mat-option>
+          <mat-option value="Btech">Btech</mat-option>
+          <mat-option value="Bcom">Bcom</mat-option>
+          <mat-option value="BE">BE</mat-option>
+          <mat-option value="Bsc">Bsc</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div formArrayName="employeeDetails">
+      <div *ngFor="let detail of employeeDetailsControls; let i=index" [formGroupName]="i">
+        <div class="content">
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="Enter First name" formControlName="FirstName"/>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Enter email" formControlName="Email"/>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Position</mat-label>
+            <mat-select formControlName="Position">
+              <mat-option value="Java Developer">Java Developer</mat-option>
+              <mat-option value="Angular Developer">Angular Developer</mat-option>
+              <mat-option value="Software tasting">Software tasting</mat-option>
+              <mat-option value="Php Developer">Php Developer</mat-option>
+              <mat-option value="Web Developer">Web Developer</mat-option>
+            </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>States</mat-label>
+              <mat-select formControlName="States">
+                <mat-option value="Active">Active</mat-option>
+                <mat-option value="Inactive">Inactive</mat-option>
+                <mat-option value="Leave">Leave</mat-option>
+              </mat-select>
+              </mat-form-field>
+          <button mat-icon-button color="warn"class="k" (click)="removeEmployeeDetail(i)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <button mat-raised-button color="accent" (click)="addEmployeeDetail()">+Add</button>
+  </div>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button color="warn" type="button" [mat-dialog-close]="false">Cancel</button>
+    <button mat-raised-button color="primary" type="submit">Save</button>
+  </div>
+</form>

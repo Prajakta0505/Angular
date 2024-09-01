@@ -1,0 +1,27 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .mat-toolbar {
+    background-color: pink;
+  }
+ 
+.mat-toolbar {
+    height: 64px;
+  }
+
+  span{
+    color: navy;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+ 
+.mat-list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p, .obs, .a {
+  flex: 1;
+  text-align: center; /* Optional: to center the text within each link */
+  margin: 0 10px; /* Adjust the margin as needed */
+}

@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+        </button>
+        <h1>Radhabai Kale Mahila Mahavidyalaya</h1>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav opened="true" mode="side">
+        <mat-nav-list>
+            <a mat-list-item [routerLink]="['/all/student']">Student-list</a>
+            <a mat-list-item [routerLink]="['/all/staff']">Staff-list</a>     
+          </mat-nav-list>       
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height : 88vh;">
+         <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

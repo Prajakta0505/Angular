@@ -1,0 +1,35 @@
+<div mat-dialog-title>
+    <h1>Country Form</h1>
+  </div>
+  <form [formGroup]="studForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>ID</mat-label>
+          <input matInput placeholder="Ex.1" formControlName="id">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Country Name</mat-label>
+          <input matInput placeholder="Ex.India" formControlName="name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Capital</mat-label>
+          <input matInput placeholder="Ex.New Delhi" formControlName="capital">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Population</mat-label>
+          <input matInput placeholder="Ex.12,34,567" formControlName="population">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label> State Language</mat-label>
+          <input matInput placeholder="Ex.Hindi" formControlName="language">
+        </mat-form-field>
+      </div>
+      </div>
+    <div mat-dialog-actions id="k">
+      <button mat-raised-button color="warn" type="button" (click)="closeform()">Cancel</button>
+      <button mat-raised-button color="primary" type="submit">save</button>
+    </div>
+  </form>

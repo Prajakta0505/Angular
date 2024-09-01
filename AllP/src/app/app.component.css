@@ -1,0 +1,18 @@
+.sidenav
+{
+    background-color: gainsboro;
+}
+.active-list-item {
+    color: blue !important; 
+  }
+
+  .All
+  h1{
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+
+  .example-spacer
+  {
+      flex: 1 1 auto !important
+  }
